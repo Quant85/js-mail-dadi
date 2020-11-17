@@ -1,7 +1,7 @@
 
 /* Generare un numero random da 1  a 6, sia per il giocatore sia per il computer
 Stabilire il vincitore, in base a chi fa il punteggio più alto. */
-var numeroRandomGiocatore, numeroRandomBanco, risultatoGiocatore, risultatoBanco, btnLanciaDadi, valoreGiocatore, immagineDadoGiocatore, valoreBanco, immagineDadoBanco, messaggioBanco;
+var numeroRandomGiocatore, numeroRandomBanco, risultatoGiocatore, risultatoBanco, btnLanciaDadi, valoreGiocatore, immagineDadoGiocatore, valoreBanco, immagineDadoBanco, messaggioBanco, opacity0, opacity1;
 
 btnLanciaDadi = document.getElementById("btn_lancia");
 
@@ -52,6 +52,10 @@ btnLanciaDadi.addEventListener("click", function () {
   immagineDadoBanco.src = "assets/img/banco/" + numeroRandomBanco + "banco.png";
   messaggioBanco.innerHTML = risultatoGiocatore + "" + risultatoBanco;
   //console.log(messaggioBanco);
+
+  opacity0 = document.getElementById("game_kit").classList.remove("opacity_0");
+  opacity1 = document.getElementById("game_kit").classList.add("opacity_1");
+
 });
 
 

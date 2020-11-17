@@ -13,7 +13,12 @@
 *  font-family: 'Lobster', cursive;              *
 *  font-family: 'Source Sans Pro', sans-serif;   *
 **************************************************/
-
+.opacity_0 {
+  opacity: 0;
+}
+.opacity_1 {
+  opacity: 1;
+}
 body {
   background-image: url("../img/wood-bg.jpg");
 }
@@ -69,15 +74,19 @@ p {
   cursor: pointer;
 }
 
-.risultati {
+#main_box_game {
   background-image: url(../img/velvet-bg.jpg);
+  box-shadow: inset 0px 0px 50px 10px rgb(35, 102, 9);
+  border-radius: 15px;
+  border: 5px solid rgba(139, 87, 44, 0.74);
+}
+.risultati {
   min-height: 400px;
   text-align: center;
-  box-shadow: inset 0px 0px 50px 10px rgb(35, 102, 9);
-  border-radius: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  transition: opacity 0.8s ease-in-out;
 }
 .area_giocatore,
 .area_banco {
