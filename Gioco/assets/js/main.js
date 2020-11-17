@@ -1,4 +1,38 @@
-/* La partita si apre con il come out roll. Si tratta del primo lancio della partita. Questo lancio viene effettuato dal giocatore tiratore, che cambia ad ogni mano in senso antiorario. Il risultato di questo lancio determina la fase successiva del gioco.
-Se il risultato è un 7 o un 11 vince il Pass Line e la partita finisce
-Se il risultato è un 2,3 o 12 si dice Craps. In questo caso il Pass Line perde e la partita finisce con la vittoria del Don’t Pass Line
-Se il risultato è 4,5,6,8,9 o 10 si stabilisce un punto, detto point in inglese. In questa situazione la partita continua. Il croupier posiziona un marcatore con la scritta ON sulla casella del numero corrispondente. A questo punto i dadi vengono rilanciati fino a che il giocatore non riesce a ripetere il risultato del punto, vincendo la partita. Se invece il tiratore ottime un 7 prima di riuscire a ripetere il risultato, perde la partita. */
+
+/* Generare un numero random da 1  a 6, sia per il giocatore sia per il computer
+Stabilire il vincitore, in base a chi fa il punteggio più alto. */
+
+var numeroRandomGiocatore;
+var numeroRandomPc;
+
+var risultatoGiocatore;
+var risultatoPc;
+
+numeroRandomGiocatore = Math.round(Math.random() * (6 - 1) + 1);
+console.log(numeroRandomGiocatore);
+
+numeroRandomPc = Math.round(Math.random() * (6 - 1) + 1);
+console.log(numeroRandomPc);
+
+if (numeroRandomGiocatore > numeroRandomPc) {
+
+  risultatoGiocatore = "Il tuo lancio ti ha dato un bel " + numeroRandomGiocatore + ". Complimenti hai Vinto!!";
+  console.log(risultatoGiocatore);
+
+  risultatoPc = "Che sfotuna un " + numeroRandomPc + ". Per poco mi bastavano solo " + (numeroRandomGiocatore - numeroRandomPc) + " in più e non avresti vinto!! La prossima volta ti batterò.";
+  console.log(risultatoPc);
+
+} else if (numeroRandomGiocatore == numeroRandomPc) {
+
+  risultatoGiocatore = "Il tuo risultato è " + numeroRandomGiocatore + ". Non basta mi dispiace!!";
+  console.log(risultatoGiocatore);
+
+  risultatoPc = "Bella giocata, ma anche io ho un " + numeroRandomPc + ", direi di farne un'altra.";
+  console.log(risultatoPc);
+} else {
+  risultatoGiocatore = "Hai un " + numeroRandomGiocatore + ". Mi dispiace ma questa volta non basta!!";
+  console.log(risultatoGiocatore);
+
+  risultatoPc = "Bella giocata, ma il mio " + numeroRandomPc + " non lascia scampo!!";
+  console.log(risultatoPc); 
+}
