@@ -46,11 +46,17 @@ btnLanciaDadi.addEventListener("click", function () {
     console.log(risultatoBanco); 
   }
 
-
-
+valoreGiocatore = document.getElementById("valore_banco");
+valoreBanco = document.getElementById("valore_giocatore");
 messaggioBanco = document.getElementById("messaggio_banco");
+
+valoreGiocatore.innerHTML = numeroRandomGiocatore;
+console.log(valoreGiocatore);
+valoreBanco.innerHTML = numeroRandomBanco;
+console.log(valoreBanco);
 messaggioBanco.innerHTML = risultatoGiocatore + "" + risultatoBanco;
 console.log(messaggioBanco);
+
 });
 
 
