@@ -1,62 +1,57 @@
 
 /* Generare un numero random da 1  a 6, sia per il giocatore sia per il computer
 Stabilire il vincitore, in base a chi fa il punteggio più alto. */
+var numeroRandomGiocatore, numeroRandomBanco, risultatoGiocatore, risultatoBanco, btnLanciaDadi, valoreGiocatore, immagineDadoGiocatore, valoreBanco, immagineDadoBanco, messaggioBanco;
 
-var numeroRandomGiocatore;
-var numeroRandomBanco;
-
-var risultatoGiocatore;
-var risultatoBanco;
-
-var btnLanciaDadi = document.getElementById("btn_lancia");
-
-var valoreGiocatore;
-var valoreBanco;
-var messaggioBanco;
+btnLanciaDadi = document.getElementById("btn_lancia");
 
 
 btnLanciaDadi.addEventListener("click", function () {
 
   numeroRandomGiocatore = Math.round(Math.random() * (6 - 1) + 1);
-  console.log(numeroRandomGiocatore);
+  //console.log(numeroRandomGiocatore);
   
   numeroRandomBanco = Math.round(Math.random() * (6 - 1) + 1);
-  console.log(numeroRandomBanco);
+  //console.log(numeroRandomBanco);
   
   if (numeroRandomGiocatore > numeroRandomBanco) {
   
-    risultatoGiocatore = "Il tuo lancio ti ha dato un bel " + numeroRandomGiocatore + ". Complimenti hai Vinto!!";
-    console.log(risultatoGiocatore);
+    risultatoGiocatore = "Complimenti hai Vinto!! Il tuo  " + numeroRandomGiocatore;
+    //console.log(risultatoGiocatore);
   
-    risultatoPc = "Che sfotuna un " + numeroRandomBanco + ". Per poco mi bastavano solo " + (numeroRandomGiocatore - numeroRandomBanco) + " in più e non avresti vinto!! La prossima volta ti batterò.";
-    console.log(risultatoBanco);
+    risultatoBanco = " non ha lasciato scampo al mio  " + numeroRandomBanco + ". Se solo avessi avuto un  " + (numeroRandomGiocatore + 1) + "  non avresti vinto!! La prossima volta ti batterò.";
+    //console.log(risultatoBanco);
   
   } else if (numeroRandomGiocatore == numeroRandomBanco) {
   
-    risultatoGiocatore = "Il tuo risultato è " + numeroRandomGiocatore + ". Non basta mi dispiace!!";
-    console.log(risultatoGiocatore);
+    risultatoGiocatore = "Bella giocata, hai un " + numeroRandomGiocatore + ". Peccato man non basta, mi dispiace!!";
+    //console.log(risultatoGiocatore);
   
-    risultatoBanco = "Bella giocata, ma anche io ho un " + numeroRandomBanco + ", direi di farne un'altra.";
-    console.log(risultatoBanco);
+    risultatoBanco = " Ho un " + numeroRandomBanco + ". Direi di farne un'altra.";
+    //console.log(risultatoBanco);
   } else {
-    risultatoGiocatore = "Hai un " + numeroRandomGiocatore + ". Mi dispiace ma questa volta non basta!!";
-    console.log(risultatoGiocatore);
+    risultatoGiocatore = "Bella giocata, hai un " + numeroRandomGiocatore + ".  Mi dispiace ma questa volta non basta!!";
+    //console.log(risultatoGiocatore);
   
-    risultatoBanco = "Bella giocata, ma il mio " + numeroRandomBanco + " non lascia scampo!!";
-    console.log(risultatoBanco); 
+    risultatoBanco = " Il mio " + numeroRandomBanco + " non lascia scampo!!";
+    //console.log(risultatoBanco); 
   }
 
-valoreGiocatore = document.getElementById("valore_banco");
-valoreBanco = document.getElementById("valore_giocatore");
-messaggioBanco = document.getElementById("messaggio_banco");
+  valoreGiocatore = document.getElementById("valore_giocatore");
+  immagineDadoGiocatore = document.getElementById("immagine_dado_giocatore");
+  valoreBanco = document.getElementById("valore_banco");
+  immagineDadoBanco = document.getElementById("immagine_dado_banco");
+  messaggioBanco = document.getElementById("messaggio_banco");
 
-valoreGiocatore.innerHTML = numeroRandomGiocatore;
-console.log(valoreGiocatore);
-valoreBanco.innerHTML = numeroRandomBanco;
-console.log(valoreBanco);
-messaggioBanco.innerHTML = risultatoGiocatore + "" + risultatoBanco;
-console.log(messaggioBanco);
-
+  valoreGiocatore.innerHTML = numeroRandomGiocatore;
+  //console.log(valoreGiocatore);
+  immagineDadoGiocatore.src = "assets/img/giocatore/" + numeroRandomGiocatore + ".png";
+  //console.log(immagineDadoBanco.src);
+  valoreBanco.innerHTML = numeroRandomBanco;
+  //console.log(valoreBanco);
+  immagineDadoBanco.src = "assets/img/banco/" + numeroRandomBanco + "banco.png";
+  messaggioBanco.innerHTML = risultatoGiocatore + "" + risultatoBanco;
+  //console.log(messaggioBanco);
 });
 
 

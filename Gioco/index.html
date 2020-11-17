@@ -4,31 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Js Gioco dei Dadi</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Indie+Flower&family=Lato:ital,wght@0,400;0,700;1,900&family=Lobster&family=Modak&family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
   <body>
-    <main id="main_box_game">
+    <header id="header_box_game">
       <h1>IL GIOCO DEI DADI</h1>
-      <h2>Regole</h2>
-      <p>
-        Ogni giocatore ha a sua disposizione un dado con valori da 1 a 6. Un solo lancio a disposizione e chi totalizza il valore più alto vince. <br>
-        In caso di pareggio il banco vince, ma tranquillo non dovrai dargli nulla, al massimo potrai chiedere la rivincita.
-      </p>
-      <input type="button" id="btn_lancia" value="Lancia i Dadi">
-      <div class="risultati">
-        <h4>Risultato Giocatore</h4>
-        <span id="valore_giocatore"></span>
-        <!-- /#prezzo_int -->
-        <h4>Risultato Banco</h4>
-        <span id="valore_banco"></span>
-        <!-- /#scont -->
-        <p id="messaggio_banco"></p>
-        <img src="assets/img/dadi.jpg" alt="">
-        <!-- /#Cost_scont -->
-      </div>
+      <section class="header_main">
+        <h2>Regole</h2>
+        <div id="info_box">
+          <p>
+            Ogni giocatore ha a sua disposizione un dado con valori da 1 a 6. <br> Un solo lancio a disposizione e chi totalizza il valore più alto vince. <br>
+            In caso di pareggio il banco vince, ma tranquillo non dovrai dargli nulla, al massimo potrai chiedere la rivincita.
+          </p>
+          <input type="button" id="btn_lancia" value="Lancia i Dadi">     
+        </div>
+        <!-- /#info_box -->
+      </section>
+    </header>
+    <!-- /#header_box_game -->
 
+    <main id="main_box_game">
+      <div class="risultati">
+        <section class="area_giocatore">
+          <h4>Risultato Giocatore</h4>
+          <p id="valore_giocatore"></p>
+          <img src="" alt="risultato del lancio dei dadi" id="immagine_dado_giocatore">
+          <!-- /#valore_giocatore -->
+        </section>
+        <!-- /.spazio_giocatore -->
+
+        <section class="area_banco">
+          <h4>Risultato Banco</h4>
+          <p id="valore_banco">
+            
+          </p>
+          <img src="" alt="risultato del lancio dei dadi" id="immagine_dado_banco">
+          <!-- /#valore_banco -->
+        </section>
+        <p id="messaggio_banco"></p>
+      </div>
     </main>
-    <!-- /#box_game -->
+    <!-- /#main_box_game -->
     
 
     <script src="assets/js/main.js"></script>
