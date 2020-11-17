@@ -10,6 +10,7 @@ var risultatoPc;
 
 var btnLanciaDadi = document.getElementById("btn_lancia");
 
+
 btnLanciaDadi.addEventListener("click", function () {
 
   numeroRandomGiocatore = Math.round(Math.random() * (6 - 1) + 1);
@@ -40,4 +41,14 @@ btnLanciaDadi.addEventListener("click", function () {
     risultatoPc = "Bella giocata, ma il mio " + numeroRandomPc + " non lascia scampo!!";
     console.log(risultatoPc); 
   }
+  var messaggioBanco;
+
+messaggioBanco = document.getElementById("messaggio_banco");
+messaggioBanco.innerHTML = risultatoGiocatore + "" + risultatoPc;
+console.log(messaggioBanco);
 });
+
+
+
+
+
