@@ -1,0 +1,4 @@
+/* La partita si apre con il come out roll. Si tratta del primo lancio della partita. Questo lancio viene effettuato dal giocatore tiratore, che cambia ad ogni mano in senso antiorario. Il risultato di questo lancio determina la fase successiva del gioco.
+Se il risultato è un 7 o un 11 vince il Pass Line e la partita finisce
+Se il risultato è un 2,3 o 12 si dice Craps. In questo caso il Pass Line perde e la partita finisce con la vittoria del Don’t Pass Line
+Se il risultato è 4,5,6,8,9 o 10 si stabilisce un punto, detto point in inglese. In questa situazione la partita continua. Il croupier posiziona un marcatore con la scritta ON sulla casella del numero corrispondente. A questo punto i dadi vengono rilanciati fino a che il giocatore non riesce a ripetere il risultato del punto, vincendo la partita. Se invece il tiratore ottime un 7 prima di riuscire a ripetere il risultato, perde la partita. */
